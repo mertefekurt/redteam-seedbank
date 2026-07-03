@@ -1,0 +1,9 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="360" rx="28" fill="#1a1014"/>
+  <path d="M720 264 C760 102 840 102 880 264 C920 102 1000 102 1040 264" stroke="#ef4444" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.82"/>
+  <circle cx="1030" cy="82" r="42" fill="#ef4444" opacity="0.16"/>
+  <circle cx="1094" cy="138" r="18" fill="#ffffff" opacity="0.16"/>
+  <text x="76" y="154" fill="#f8fafc" font-family="Inter, ui-sans-serif, system-ui" font-size="64" font-weight="800">redteam-seedbank</text>
+  <text x="80" y="216" fill="#cbd5e1" font-family="Inter, ui-sans-serif, system-ui" font-size="28">safe adversarial seeds for evals</text>
+  <rect x="80" y="258" width="220" height="8" rx="4" fill="#ef4444"/>
+</svg>
