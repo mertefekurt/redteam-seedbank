@@ -1,38 +1,38 @@
-# redteam-seedbank
+![Redteam Seedbank cover](assets/readme-cover.svg)
 
-![redteam-seedbank banner](assets/banner.svg)
+# Redteam Seedbank
 
-A small local seed catalog for AI application red-team checks. It gives you deterministic prompt seeds by
-category so an eval suite can start from known pressure points instead of improvised one-off examples.
+![stack](https://img.shields.io/badge/stack-Python-0891b2?style=flat-square) ![python](https://img.shields.io/badge/python-3.11-b45309?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-be185d?style=flat-square) ![ci](https://img.shields.io/badge/ci-GitHub%20Actions-4b5563?style=flat-square)
 
-## Catalog
+Generate compact red-team prompt seeds for AI app evaluations.
+
+## Read this first
+
+This is a compact tool, not a platform. The useful part is the repeatable check and the plain output, so the repository keeps setup and code paths short.
+
+## First run
 
 ```bash
-redteam-seedbank list
-redteam-seedbank sample --category prompt-injection --count 3 --format jsonl
-redteam-seedbank sample --category tool-abuse --count 2 --seed 7
+python -m pip install -e ".[dev]"
+redteam-seedbank examples/sample.jsonl
 ```
 
-## Categories
+## Maintenance
 
-- `prompt-injection`
-- `data-exfiltration`
-- `overreliance`
-- `policy-boundary`
-- `tool-abuse`
+```bash
+python -m pip install -e ".[dev]"
+ruff check .
+pytest
+python -m redteam_seedbank --help
+```
 
-## Design choice
+## Repository map
 
-This project does not generate harmful instructions. Seeds are written as evaluation prompts that describe the
-pressure pattern and expected defense behavior. That makes them safe to store in a public repo and useful in CI.
-
-## Output contract
-
-JSONL rows include `id`, `category`, `prompt`, and `expected_behavior`.
-
-## Test surface
-
-Deterministic sampling, category filtering, Markdown rendering, JSONL rendering, unknown-category errors, and
-CLI help are covered.
-
-MIT.
+```text
+.github/        CI workflow
+examples/       sample inputs
+src/            package source
+tests/          test coverage
+.gitignore      project file
+pyproject.toml  package metadata
+```
