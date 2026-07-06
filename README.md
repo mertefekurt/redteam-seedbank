@@ -1,14 +1,10 @@
 # Redteam Seedbank
 
-A deterministic seed catalog for quick application safety checks.
-
 ![Redteam Seedbank cover](assets/readme-cover.svg)
 
-## Categories
+Redteam Seedbank focuses on one practical job in model evaluation. The README below is arranged around the shortest path from clone to result.
 
-`prompt-injection`, `data-exfiltration`, `overreliance`, `policy-boundary`, and `tool-abuse`.
-
-## Use it
+## Try the sample
 
 ```bash
 git clone https://github.com/mertefekurt/redteam-seedbank.git
@@ -18,4 +14,17 @@ redteam-seedbank list
 redteam-seedbank sample --category tool-abuse --count 2 --seed 7
 ```
 
-Each seed has an ID, category, prompt, and expected behavior. That keeps small evaluations repeatable without turning them into a large benchmark project.
+## File map
+
+```text
+.github/        CI workflow
+examples/       sample inputs
+src/            package source
+tests/          test coverage
+.gitignore      project file
+pyproject.toml  package metadata
+```
+
+## How it runs
+
+![Workflow diagram](assets/readme-diagram.svg)
